@@ -76,7 +76,7 @@ jobs:
         run: |
           docker push kopilnagi/react-procution-app:latest
 
-  # deploy-to-eks:
+  # deploy-to-eks-cluster:
   #   name: Deploy to EKS
   #   runs-on: ubuntu-latest
   #   needs: docker-build-push
