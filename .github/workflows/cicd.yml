@@ -113,6 +113,10 @@ jobs:
 
       - name: Verify IAM User
         run: aws sts get-caller-identity
+
+      - name: Refresh EKS Token
+        run: |
+          aws ek get-token  --cluster-name production-server --region ap-south-1
       
       - name: Test Kubernetes Access
         run: |
