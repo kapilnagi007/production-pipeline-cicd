@@ -116,7 +116,7 @@ jobs:
 
       - name: Refresh EKS Token
         run: |
-          aws ek get-token  --cluster-name production-server --region ap-south-1
+          aws eks get-token  --cluster-name production-server --region ap-south-1
       
       - name: Test Kubernetes Access
         run: |
