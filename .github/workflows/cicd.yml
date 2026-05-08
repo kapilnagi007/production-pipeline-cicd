@@ -114,6 +114,11 @@ jobs:
       - name: Verify IAM User
         run: aws sts get-caller-identity
       
+      - name: Test Kubernetes Access
+        run: |
+          kubectl config current-context
+          kubectl get nodes
+          
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f demo-app/k8s/deployment.yml

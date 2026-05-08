@@ -19,6 +19,5 @@ spec:
       containers:
         - name: react-procution-app
           image:  kopilnagi/react-procution-app:latest
-  
           ports:
           - containerPort: 80
