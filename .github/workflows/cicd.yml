@@ -74,7 +74,7 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t kopilnagi/react-procution-app:latest .
+          docker build -t kopilnagi/react-procution-app:latest ./demo-app
 
       - name: Scan Docker image
         uses: aquasecurity/trivy-action@master
