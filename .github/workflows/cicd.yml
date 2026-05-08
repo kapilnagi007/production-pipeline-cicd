@@ -117,8 +117,8 @@ jobs:
       - name: Test Kubernetes Access
         run: |
           kubectl config current-context
-          kubectl get nodes
-          
+          kubectl get node
+
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f demo-app/k8s/deployment.yml
