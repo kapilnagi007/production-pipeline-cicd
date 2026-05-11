@@ -80,14 +80,14 @@ jobs:
         uses: aquasecurity/trivy-action@master
         continue-on-error: true
         with:
-          image-ref: kopilnagi/react-procution-app:latest
+          image-ref: kopilnagi/react-procution-app:v1
           formate: table
           exit-code: 1
           severity: CRITICAL
       
       - name: Push Docker image
         run: |
-          docker push kopilnagi/react-procution-app:latest
+          docker push kopilnagi/react-procution-app:v1
 
   deploy-to-eks:
     name: Deploy to EKS
