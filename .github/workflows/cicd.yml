@@ -74,7 +74,7 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build -t kopilnagi/react-procution-app:latest ./demo-app
+          docker build -t kopilnagi/react-procution-app:v1 ./demo-app
 
       - name: Scan Docker image
         uses: aquasecurity/trivy-action@master
@@ -109,14 +109,14 @@ jobs:
         run: |
           aws eks update-kubeconfig \
           --region ap-south-1 \
-          --name production-server
+          --name productio-server
 
       - name: Verify IAM User
         run: aws sts get-caller-identity
 
       - name: Refresh EKS Token
         run: |
-          aws eks get-token  --cluster-name production-server --region ap-south-1
+          aws eks get-token  --cluster-name productio-server --region ap-south-1
       
       - name: Test Kubernetes Access
         run: |
