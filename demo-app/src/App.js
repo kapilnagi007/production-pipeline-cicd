@@ -6,8 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>This is bigtitle</h1>
-         <h2>This is SmallTItle</h2>
+        <h1>This is Big Title</h1>
+         <h2>This is Small Title</h2>
+         <h3>This is Medium Title</h3>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
